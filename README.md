@@ -19,3 +19,14 @@ bipartite_graph = result[0]
 min_cap = result[1] 
 print("Maximum number of games required by any one celebrity = " + str(min_cap) + ":") 
 print_pairing(bipartite_graph, 's', 't', min_cap, celebs)
+
+Maximum number of games required by any one celebrity = 3:
+abi->bob
+abi->abe
+abi->hal
+adam->dan
+adam->ian
+col->cath
+jon->fay
+dee->jess
+gay->gav
