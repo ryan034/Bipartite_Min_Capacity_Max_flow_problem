@@ -1,4 +1,4 @@
-Specialized max flow problem involving an bipartite graph. Finds the minimum capacity of the edges leading from the source needed to achieve maximum flow between the two independent sets. Has O(logV*VE^2) complexity.
+Specialized max flow problem involving an bipartite graph. Finds the minimum capacity of the edges leading from the source needed to achieve maximum flow between the two independent sets. Has O(logV*VE^2) complexity where V is the number of vertices and E is the number of edges.
 
 The example application below involves the senario between donors and celebrities.
 
