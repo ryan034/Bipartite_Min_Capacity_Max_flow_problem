@@ -2,6 +2,7 @@ Specialized max flow problem involving an bipartite graph. Finds the minimum cap
 
 The example application below involves the senario between donors and celebrities.
 
+```
 donors = {'abe': ['abi'],
 'bob': ['abi'],
 'cath': ['abi', 'dee', 'bea', 'col'],
@@ -19,7 +20,9 @@ bipartite_graph = result[0]
 min_cap = result[1] 
 print("Maximum number of games required by any one celebrity = " + str(min_cap) + ":") 
 print_pairing(bipartite_graph, 's', 't', min_cap, celebs)
+```
 
+```
 Maximum number of games required by any one celebrity = 3:
 abi->bob
 abi->abe
@@ -30,3 +33,4 @@ col->cath
 jon->fay
 dee->jess
 gay->gav
+```
