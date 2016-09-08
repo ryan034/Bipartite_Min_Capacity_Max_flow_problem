@@ -1,7 +1,11 @@
 Specialized max flow problem involving an bipartite graph. Finds the minimum capacity of the edges leading from the source needed to achieve maximum flow between the two independent sets. Has O(logV*VE^2) complexity where V is the number of vertices and E is the number of edges.
 
-The example application below involves the senario between donors and celebrities.
+The example application below involves the senario between a set of donors and a set of celebrities. Each donor has a list of preferred celebrities, one of which they will be invited to play a game of golf with. Every donor is guaranteed a game with exactly one of the celebrities on their list. We need to schedule each celebrity to make sure the maximum number of games any one celebrity has to play is at the minimum. 
 
+
+
+
+eg.
 ```
 donors = {'abe': ['abi'],
 'bob': ['abi'],
@@ -21,7 +25,7 @@ min_cap = result[1]
 print("Maximum number of games required by any one celebrity = " + str(min_cap) + ":") 
 print_pairing(bipartite_graph, 's', 't', min_cap, celebs)
 ```
-
+Output:
 ```
 Maximum number of games required by any one celebrity = 3:
 abi->bob
