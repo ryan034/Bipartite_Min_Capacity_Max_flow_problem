@@ -2,7 +2,9 @@ Specialized max flow problem involving an bipartite graph. Finds the minimum cap
 
 The example application below involves the senario between a set of donors and a set of celebrities. Each donor has a list of preferred celebrities, one of which they will be invited to play a game of golf with. Every donor is guaranteed a game with exactly one of the celebrities on their list. We need to schedule each celebrity to make sure the maximum number of games any one celebrity has to play is at the minimum. 
 
+Contains two routines, min_capacity_max_flow(donor_dict, celeb_list) and print_pairing(flow_network, source, sink, min_cap, celeb_list) and the FlowNetwork(object) and Edge(object) classes.
 
+min_capacity_max_flow(donor_dict, celeb_list) inputs a dictionary of donors whos respective values are a list of their preferred celebrities; and the list of all celebrities. It constructs the flow network bipartite graph with donor vertices on one side and celebrity vertices on the other. Every celebrity vertex is connected to a donor vertex if and only if    
 
 
 eg.
