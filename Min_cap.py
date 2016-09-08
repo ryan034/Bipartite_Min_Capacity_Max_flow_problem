@@ -1,6 +1,10 @@
 import math
 
 class Edge(object):
+    """
+    Initialises the edge class. 
+    Code from wikipedia.com.
+    """
     def __init__(self, u, v, w):
         self.source = u
         self.sink = v  
@@ -13,7 +17,10 @@ class Edge(object):
         self.capacity = cap
               
 class FlowNetwork(object):
-    
+    """
+    Initialises the flow network class. 
+    Code from wikipedia.com.
+    """
     def __init__(self):
         self.adj = {}
         self.flow = {}
@@ -41,6 +48,9 @@ class FlowNetwork(object):
             self.flow[edge_flow] = 0
 
     def bfs(self, source, sink, path, sum):
+        """
+        Edmonds-Karp implementation using breath first search to find paths. 
+        """
         if source == sink:
             for edge in path:
                 self.flow[edge] += 1
@@ -54,7 +64,10 @@ class FlowNetwork(object):
         return sum
 
 def min_capacity_max_flow(donor_dict, celeb_list):
-    
+    """
+    Creates flow network.
+    Increments source capacity using bnary search to find minimum capacity for maximum flow.
+    """
     donors_playing = len(donor_dict)
     lower_bound = math.ceil(donors_playing/len(celeb_list))
     
@@ -108,7 +121,9 @@ def min_capacity_max_flow(donor_dict, celeb_list):
     return [g, upper]
 
 def print_pairing(flow_network, source, sink, min_cap, celeb_list):
-
+    """
+    Prints out pairings within the bipartite flow network.
+    """
     for edge in flow_network.get_edges(source):
 
         edge.increment_cap(min_cap)
