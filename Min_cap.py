@@ -12,7 +12,6 @@ class Edge(object):
     def increment_cap(self,cap):
         self.capacity = cap
               
-
 class FlowNetwork(object):
     
     def __init__(self):
